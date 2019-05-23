@@ -1,0 +1,21 @@
+<div class="bg-wave"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg col-md col-sm item-center">
+            <img src="{{logo}}" class="logo-home" alt="">
+        </div>
+        <div class="col-md-12">
+            <h2 class="item-center sub-tittle-logo">{{subTitle}}</h2>
+        </div>
+        <div class="col-md-12 col-sm-12 btn-center">
+            <ng-container *ngFor="let selectSolution of selectSolutions">
+                <div class="col-md-2">
+                    <a routerLink="{{selectSolution.url}}" [queryParams]="{action:'solutions', referer:'reaxium'}">
+                        <img src="{{selectSolution.svg}}" class="btn-home-solution" alt="">
+                        <p class="btn-desc">{{selectSolution.desc}}</p>
+                    </a>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
